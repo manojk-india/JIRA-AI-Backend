@@ -1,2 +1,2 @@
 # JIRA-AI-Backend
-We perfect our JIRA AI backend here ....... Happy coding 
+We build our JIRA AI backend here ....... Happy coding 
