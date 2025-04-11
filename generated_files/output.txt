@@ -1,0 +1,12 @@
+User Query: Go to previous 2 sprints and calculate the avg story points assigned per sprint and then go to future 2 sprints and check whether its over utilized or underutilized by comparing it to average story points assigned in previous 2 sprints
+Average story points in previous 2 sprints: 4.33
+
+Future Sprint Utilization:
+Sprint: Sprint 9
+Total Story Points: 54
+Status: Over-utilized
+
+Sprint: Sprint 8
+Total Story Points: 105
+Status: Over-utilized
+
