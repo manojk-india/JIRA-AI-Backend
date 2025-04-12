@@ -1,5 +1,5 @@
 crewai
 pandas
-# chainlit 
-# speechrecognition
 matplotlib
+faiss-cpu
+sentence-transformers

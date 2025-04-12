@@ -1,12 +1,6 @@
-User Query: Go to previous 2 sprints and calculate the avg story points assigned per sprint and then go to future 2 sprints and check whether its over utilized or underutilized by comparing it to average story points assigned in previous 2 sprints
-Average story points in previous 2 sprints: 4.33
+User Query: Calculate the average story points from the last 2 completed sprints in the CDF board, then compare the total story points of the next 2 future sprints (one at a time) with this average, and classify each future sprint as 'Underutilized', 'Okay Utilization', or 'Overutilized'
 
-Future Sprint Utilization:
-Sprint: Sprint 9
-Total Story Points: 54
-Status: Over-utilized
+Average Story Points from Last Two Completed Sprints: 86.5
 
-Sprint: Sprint 8
-Total Story Points: 105
-Status: Over-utilized
-
+Sprint: Sprint 8, Story Points: 105, Status: Overutilized
+Sprint: Sprint 9, Story Points: 54, Status: Underutilized

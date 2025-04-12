@@ -2,6 +2,7 @@
 env/
 venv/
 new_env/
+myenv1/
 
 # Ignore environment variable files
 .env
