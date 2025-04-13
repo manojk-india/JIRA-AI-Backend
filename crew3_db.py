@@ -18,7 +18,7 @@ db2={
 
          # Write the result to a text file
          with open("generated_files/output.txt", "w") as f:
-            f.write(f"Total story points assigned to x: {total_story_points}\n")
+            f.write(f"Total story points assigned to x "+str(total_story_points))
          #code end
 
          ''',
@@ -48,11 +48,11 @@ db2={
 
             # Save results to a text file
             with open("generated_files/output.txt", "w") as f:
-                  f.write(f"Total story points assigned to RTB in Sprint n: {total_story_points_rtb}\n")
-                  f.write(f"Total story points assigned to CTB in Sprint n: {total_story_points_ctb}\n")
-                  f.write(f"Total story points in Sprint n: {total_story_points_sprintn}\n")
-                  f.write(f"Percentage of RTB story points: {rtb_percentage:.2f}%\n")
-                  f.write(f"Percentage of CTB story points: {ctb_percentage:.2f}%\n")
+                  f.write(f"Total story points assigned to RTB in Sprint n"+str(total_story_points_rtb))
+                  f.write(f"Total story points assigned to CTB in Sprint n"+str(total_story_points_ctb))
+                  f.write(f"Total story points in Sprint n:"+str(total_story_points_sprintn))
+                  f.write(f"Percentage of RTB story points:"+str(rtb_percentage:.2f)+"%")
+                  f.write(f"Percentage of CTB story points:"+str(ctb_percentage:.2f)+"%")
             #code end
          ''',
 
@@ -81,11 +81,11 @@ db2={
 
             # Save results to a text file
             with open("generated_files/output.txt", "w") as f:
-                  f.write(f"Total story points assigned to x in Sprint n: {total_story_points_x}\n")
-                  f.write(f"Total story points assigned to y in Sprint n: {total_story_points_y}\n")
-                  f.write(f"Total story points assigned to x and y in Sprint n: {total_story_points_sprintn}\n")
-                  f.write(f"Percentage contribution of x: {x_percentage:.2f}%\n")
-                  f.write(f"Percentage contribution of y: {y_percentage:.2f}%\n")
+                  f.write(f"Total story points assigned to x in Sprint n"+str(total_story_points_x))
+                  f.write(f"Total story points assigned to y in Sprint n"+str(total_story_points_y))
+                  f.write(f"Total story points assigned to x and y in Sprint n"+str(total_story_points_sprintn))
+                  f.write(f"Percentage contribution of x:"+str(x_percentage:.2f)+"%")
+                  f.write(f"Percentage contribution of y:"+str(y_percentage:.2f)+"%")
             #code end
           ''',
 
@@ -147,7 +147,10 @@ db2={
                   f.write(f"User Query: Go to previous 2 sprints and calculate the avg story points assigned per sprint and then go to future 2 sprints and check whether its over utilized or underutilized by comparing it to average story points assigned in previous 2 sprints\n\n")
                   f.write("Average Story Points from Last Two Completed Sprints:"+str(avg_story_points))
                   for result in results:
-                        f.write(f"Sprint: {result['Sprint']}, Story Points: {result['Story Points']}, Status: {result['Status']}\n")
+                        f.write("Sprint: "+str(result['Sprint']))
+                        f.write("Story Points:"+ str(result['Story Points'])
+                        f.write("Status: "+str(result['Status']))
+                        f.write("\n")
             #code end
           ''',
 
@@ -176,12 +179,12 @@ db2={
 
             # Save results to a text file
             with open("generated_files/output.txt", "w") as f:
-                  f.write(f"Total story points assigned to FTE in Sprint n: {total_story_points_fte}\n")
-                  f.write(f"Total story points assigned to FTC in Sprint n: {total_story_points_ftc}\n")
-                  f.write(f"Total story points in Sprint n: {total_story_points_sprintn}\n")
-                  f.write(f"Percentage contribution of FTE: {fte_percentage:.2f}%\n")
-                  f.write(f"Percentage contribution of FTC: {ftc_percentage:.2f}%\n")
-                  f.write(f"FTE to FTC ratio: {total_story_points_fte}:{total_story_points_ftc}\n")
+                  f.write("Total story points assigned to FTE in Sprint n:"+str(total_story_points_fte))
+                  f.write("Total story points assigned to FTC in Sprint n:"+str(total_story_points_ftc))
+                  f.write("Total story points in Sprint n:"+str(total_story_points_sprintn))
+                  f.write("Percentage contribution of FTE:"+str(fte_percentage:.2f)+"%")
+                  f.write("Percentage contribution of FTC:"+str(ftc_percentage:.2f)+"%")
+                  f.write("FTE to FTC ratio:"+str(total_story_points_fte)+":"+str(total_story_points_ftc))
             #code end
             ''',
 
@@ -209,12 +212,12 @@ db2={
 
                   # Save results to a text file
                   with open("generated_files/output.txt", "w") as f:
-                        f.write(f"Total story points assigned to FTE in y board for Sprint n: {total_story_points_fte_y}\n")
-                        f.write(f"Total story points assigned to FTC in y board for Sprint n: {total_story_points_ftc_y}\n")
-                        f.write(f"Total story points assigned to y board in Sprint n: {total_story_points_y_sprintn}\n")
-                        f.write(f"Percentage contribution of FTE in y board for Sprint n: {fte_percentage_y:.2f}%\n")
-                        f.write(f"Percentage contribution of FTC in y board for Sprint n: {ftc_percentage_y:.2f}%\n")
-                        f.write(f"FTE to FTC ratio in y board for Sprint n: {total_story_points_fte_y}:{total_story_points_ftc_y}\n")
+                        f.write(f"Total story points assigned to FTE in y board for Sprint n:"+str(total_story_points_fte_y))
+                        f.write(f"Total story points assigned to FTC in y board for Sprint n:"+str(total_story_points_ftc_y))
+                        f.write(f"Total story points assigned to y board in Sprint n:"+str(total_story_points_y_sprintn))
+                        f.write(f"Percentage contribution of FTE in y board for Sprint n:"+str(fte_percentage_y:.2f)+"%")
+                        f.write(f"Percentage contribution of FTC in y board for Sprint n:"+str(ftc_percentage_y:.2f)+"%")
+                        f.write(f"FTE to FTC ratio in y board for Sprint n:"+str(total_story_points_fte_y)+":"+str(total_story_points_ftc_y))
                   #code end
                   ''',
 

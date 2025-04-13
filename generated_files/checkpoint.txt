@@ -33,3 +33,13 @@ users original query :How is backlog health looking for CDF board
 data to query  :All issues in CDF board
 specific need  :Calculate the average story points from the last 2 completed sprints in the CDF board, then compare the total story points of the next 2 future sprints (one at a time) with this average, and classify each future sprint as 'Underutilized', 'Okay Utilization +- 5 from average story points calculated', or 'Overutilized'
 ------------------------------------------------------------------
+Date and Time :2025-04-13 12:04:29.912524
+users original query :What are total number of story points assigned to Alok and Rishika in Sprint 8 and give it to me seperately 
+data to query  :All issues assigned to Alok and Rishika in Sprint 8
+specific need  :Story points assigned to Alok and Rishika separately in Sprint 8
+------------------------------------------------------------------
+Date and Time :2025-04-13 13:12:47.131666
+users original query :Story points assigned to Alok and Apoorva in Sprint 8 seperately 
+data to query  :All issues assigned to Alok and Apoorva in Sprint 8
+specific need  :Story points assigned to Alok and Apoorva separately in Sprint 8
+------------------------------------------------------------------

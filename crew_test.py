@@ -216,6 +216,8 @@ with open("generated_files/panda1.py",mode="w",encoding="utf-8") as f:
 
 extract_code_section("generated_files/panda1.py", "generated_files/output1.py")
 os.system("python generated_files/output1.py")
+os.remove("generated_files/panda1.py")
+
 
 if user_needs == "None":
     with open('generated_files/output.txt', 'w') as f:
@@ -256,8 +258,9 @@ else:
         f.write("\n")
 
     extract_code_section("generated_files/panda2.py", "generated_files/output2.py")
+    os.remove("generated_files/panda2.py")
     os.system("python generated_files/output2.py")
-    os.system("python final.py")
+
         
     
 

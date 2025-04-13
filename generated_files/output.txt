@@ -1,6 +1,2 @@
-User Query: Calculate the average story points from the last 2 completed sprints in the CDF board, then compare the total story points of the next 2 future sprints (one at a time) with this average, and classify each future sprint as 'Underutilized', 'Okay Utilization', or 'Overutilized'
-
-Average Story Points from Last Two Completed Sprints: 86.5
-
-Sprint: Sprint 8, Story Points: 105, Status: Overutilized
-Sprint: Sprint 9, Story Points: 54, Status: Underutilized
+Total story points assigned to Alok in Sprint 8: 4
+Total story points assigned to Apoorva in Sprint 8: 12
