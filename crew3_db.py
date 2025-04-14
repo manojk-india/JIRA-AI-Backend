@@ -1,7 +1,5 @@
 # here we are creating a database of queries and their corresponding data to query and specific needs in the form of a dictionary.
 
-
-
 db2={
     "1":'''specific_need: Sum of all story points assigned to x then 
          code for reference: 

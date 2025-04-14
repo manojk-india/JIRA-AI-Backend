@@ -46,7 +46,7 @@ sprint_data={
 #     "Alok": "FTE",
 leave_data = [
     ["Alice","PTO",datetime(2025,2,26),datetime(2025,2,28),"3","Sprint 5"],
-    ["Alice","optional holiday",datetime(2025,3,12),datetime(2025,3,12),1,"1","Sprint 6"],
+    ["Alice","optional holiday",datetime(2025,3,12),datetime(2025,3,12),"1","Sprint 6"],
     ["Alice","PTO",datetime(2025,3,26),datetime(2025,3,26),"1","Sprint 7"],
     ["Alice","sick leave",datetime(2025,4,11),datetime(2025,4,11),"1","Sprint 8"],
     ["Alice","PTO",datetime(2025,4,24),datetime(2025,4,25),"2","Sprint 9"],

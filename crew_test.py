@@ -98,6 +98,34 @@ The dataset has the following columns:
 - "employee_type": employee type of assignee ( FTE or FTC )
 """
 
+df_structure_members ='''
+The dataset has the following columns:
+- "name": name of the employee
+- "Board": board name to which the employee is part of
+
+note: a employee can be part of multiple boards...so he can be in multiple rows
+'''
+
+df_structure_pto = '''
+The dataset has the following columns:
+- "name": name of the employee
+- "leave_type": type of leave taken by employee (PTO, Sick Leave, etc)
+- "start_date": start date of leave (YYYY-MM-DD)
+- "end_date": end date of leave (YYYY-MM-DD)
+- "total_days": duration of leave in days
+- "sprint": sprint name during which the leave was taken
+'''
+
+
+
+
+
+
+
+
+
+
+
 class extracted_info(BaseModel):
     data_to_query: str
     specific_need: str
@@ -260,6 +288,48 @@ else:
     extract_code_section("generated_files/panda2.py", "generated_files/output2.py")
     os.remove("generated_files/panda2.py")
     os.system("python generated_files/output2.py")
+
+    prompt3='''
+    You are given 2 csv files 
+    1. generated_files/members.csv with structure {df_structure_members}
+    2. generated_files/PTO.csv with structure {df_structure_pto}
+    '''
+
+    agent3 = Agent(
+    role="Leave Data Analyst",
+    goal="Calculate leave days and adjust workload metrics",
+    backstory="Expert in correlating leave data with sprint commitments",
+    llm=llm,
+    verbose=True    
+    )
+
+    task4= Task(
+        description=f'''Calculate leave days to give a good idea about the workload based on the leave data provided in the csv files.
+        you can find details abt it in {prompt3}. From that learn the csv files available to you , structure pf those csv files 
+        and also learn from the relevant examples given in that.''',
+        agent=agent3,
+        expected_output="A pandas code to calculate leave days for understanding the workload",
+    )
+
+    crew3= Crew(agents=[agent3], tasks=[task4])
+    result3 = crew3.kickoff(inputs={"prompt3": prompt3})
+
+    with open("generated_files/panda3.py",mode="w",encoding="utf-8") as f:
+        f.write("\n")
+        f.write(str(result3))
+        f.write("\n")
+
+    extract_code_section("generated_files/panda3.py", "generated_files/output3.py")
+    os.system("python generated_files/output3.py")
+    os.remove("generated_files/panda3.py")
+
+
+
+
+
+
+
+
 
         
     
