@@ -2,20 +2,22 @@ import csv
 
 headers=[
     "name",
-    "Board"
+    "L1_Board",
+    "L2_Board",
+    "L3_Board",
 ]
 
 board_data = [
-    ["Alice", "CDF"],
-    ["Bob", "CDF"],
-    ["Rishika", "CDF"],
-    ["Hari", "CDF"],
-    ["Apoorva", "CDF"],
-    ["Apoorva", "ESBNF"],
-    ["David", "ESBNF"],
-    ["Pavithra", "ESBNF"],
-    ["Alok", "ESBNF"],
-    ["Peter", "ESBNF"],
+    ["Alice", "CDF","DIS","Transaction Processing"],
+    ["Bob", "CDF","DIS","Transaction Processing"],
+    ["Rishika", "CDF","DIS","Transaction Processing"],
+    ["Hari", "CDF","DIS","Transaction Processing"],
+    ["Apoorva", "CDF","DIS","Transaction Processing"],
+    ["Apoorva", "ESBNF","DIS","Transaction Processing"],
+    ["David", "ESBNF","DIS","Transaction Processing"],
+    ["Pavithra", "ESBNF","DIS","Transaction Processing"],
+    ["Alok", "ESBNF","DIS","Transaction Processing"],
+    ["Peter", "ESBNF","DIS","Transaction Processing"],
 ]
 
 
