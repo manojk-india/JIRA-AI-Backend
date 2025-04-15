@@ -6,6 +6,7 @@ db1={
          specific_need: Sum of all story points assigned to x''',
 
     "2":''' user_query: Total number story points assigned to RTB , CTB seperately in Sprint n then
+    
           data_to_query: All issues in Sprint n
           specific_need: Total number story points assigned to RTB , CTB seperately in Sprint n''',
 
