@@ -14,6 +14,10 @@ features = {
     "APS-3":"RTB","APS-4":"CTB"
 }
 
+parent_links=["parent_link_1","parent_link_2","parent_link_3","parent_link_4","parent_link_5"]
+boards=["CDF","EBSNF","TES1","TES2","APS1","APS2"]
+
+
 data=[]
 for i in features.keys():
     board=i[0:3]
@@ -24,11 +28,11 @@ for i in features.keys():
         "description":f"Description for feature {i[4]} for {board}",
         "acceptance_criteria":f"Acceptance criteria for feature {i[4]} for {board}",
         "labels":features[i],
-        "components":" ",
-        "parent_link":" ",
+        "components":random.choice(boards),
+        "parent_link":random.choice(parent_links),
         "requested_by":features[i],
-        "estimate":" ",
-        "due_date":" "
+        "estimate":random.randint(10,40),
+        "due_date": datetime(2025,12,30)
     })
 
 df=pd.DataFrame(data)

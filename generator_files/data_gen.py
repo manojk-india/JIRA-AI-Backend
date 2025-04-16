@@ -72,6 +72,13 @@ TES2={"TES-3":"RTB","TES-4":"CTB"}
 APS1={"APS-1":"CTB","APS-2":"RTB"}	
 APS2={"APS-3":"RTB","APS-4":"CTB"}
 
+CDF_fix_versions=["CDF1-8783","CDF1-8784","CDF1-8785","CDF1-8786"]
+EBSNF_fix_versions=["EBSNF1-8783","EBSNF1-8784","EBSNF1-8785","EBSNF1-8786"]
+TES1_fix_versions=["TES1-8783","TES1-8784","TES1-8785","TES1-8786"]
+TES2_fix_versions=["TES2-8783","TES2-8784","TES2-8785","TES2-8786"]
+APS1_fix_versions=["APS1-8783","APS1-8784","APS1-8785","APS1-8786"]
+APS2_fix_versions=["APS2-8783","APS2-8784","APS2-8785","APS2-8786"]
+
 
 Epic_issue_counts={
     "DIS-1": 1,"DIS-2": 1,"DIS-3": 1,"DIS-4": 1,"DIS-5": 1,"DIS-6": 1,"DIS-7": 1,
@@ -91,21 +98,27 @@ for i in range(1,401):
     if(board=="CDF"):
         epic_id=random.choice(list(CDF.keys()))
         requested_by=CDF[epic_id]
+        fix=random.choice(CDF_fix_versions)
     elif(board=="EBSNF"):
         epic_id=random.choice(list(EBSNF.keys()))
         requested_by=EBSNF[epic_id]
+        fix=random.choice(EBSNF_fix_versions)
     elif(board=="TES1"):
         epic_id=random.choice(list(TES1.keys()))
         requested_by=TES1[epic_id]
+        fix=random.choice(TES1_fix_versions)
     elif(board=="TES2"):
         epic_id=random.choice(list(TES2.keys()))
         requested_by=TES2[epic_id]
+        fix=random.choice(TES2_fix_versions)
     elif(board=="APS1"):
         epic_id=random.choice(list(APS1.keys()))
         requested_by=APS1[epic_id]
+        fix=random.choice(APS1_fix_versions)
     else:
         epic_id=random.choice(list(APS2.keys()))
         requested_by=APS2[epic_id]
+        fix=random.choice(APS2_fix_versions)
     
 
     issue_type=random.choice(issue_types)
@@ -156,11 +169,12 @@ for i in range(1,401):
          "epic_id":epic_id,
          "employee_type":role,
          "requested_by":requested_by,
-         "fix_versions":" "
+         "fix_versions":fix
     })
 
 for i in range(1,11):
     board="CDF"
+    fix_versions=random.choice(CDF_fix_versions)
     epic_id=random.choice(list(CDF.keys()))
     requested_by=CDF[epic_id]
     story_points=random.choice([1,2,3,5,8])
@@ -201,11 +215,12 @@ for i in range(1,11):
          "epic_id":epic_id,
          "employee_type":role,
          "requested_by":requested_by,
-         "fix_versions":" "	
+         "fix_versions":fix_versions	
     })
 
 for i in range(1,11):
     board="EBSNF"
+    fix_versions=random.choice(EBSNF_fix_versions)
     epic_id=random.choice(list(EBSNF.keys()))
     requested_by=EBSNF[epic_id]
     story_points=random.choice([1,2,3,5,8])
@@ -244,11 +259,12 @@ for i in range(1,11):
          "epic_id":epic_id,
          "employee_type":role,
          "requested_by":requested_by,
-         "fix_versions":" "	
+         "fix_versions":fix_versions
     })
 
 for i in range(1,11):
     board="TES1"
+    fix_versions=random.choice(TES1_fix_versions)
     epic_id=random.choice(list(TES1.keys()))
     requested_by=TES1[epic_id]
     story_points=random.choice([1,2,3,5,8])
@@ -287,12 +303,13 @@ for i in range(1,11):
          "epic_id":epic_id,
          "employee_type":role,
          "requested_by":requested_by,
-         "fix_versions":" "
+         "fix_versions":fix_versions
     })
 
 for i in range(1,11):
 
     board="TES2"
+    fix_versions=random.choice(TES2_fix_versions)
     epic_id=random.choice(list(TES2.keys()))
     requested_by=TES2[epic_id]
     story_points=random.choice([1,2,3,5,8])
@@ -331,10 +348,11 @@ for i in range(1,11):
          "epic_id":epic_id,
          "employee_type":role,
          "requested_by":requested_by,
-         "fix_versions":" "
+         "fix_versions":fix_versions
     })
 for i in range(1,11):   
     board="APS1"
+    fix_versions=random.choice(APS1_fix_versions)
     epic_id=random.choice(list(APS1.keys()))
     requested_by=APS1[epic_id]
     story_points=random.choice([1,2,3,5,8])
@@ -371,10 +389,11 @@ for i in range(1,11):
          "epic_id":epic_id,
          "employee_type":role,
          "requested_by":requested_by,
-         "fix_versions":" "
+         "fix_versions":fix_versions
     })
 for i in range(1,11):
     board="APS2"
+    fix_versions=random.choice(APS2_fix_versions)
     epic_id=random.choice(list(APS2.keys()))
     requested_by=APS2[epic_id]
     story_points=random.choice([1,2,3,5,8])
@@ -412,7 +431,7 @@ for i in range(1,11):
          "epic_id":epic_id,
          "employee_type":role,
          "requested_by":requested_by,
-         "fix_versions":" "
+         "fix_versions":fix_versions
     })
 
 
