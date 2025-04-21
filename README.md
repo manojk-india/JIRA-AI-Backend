@@ -20,8 +20,6 @@ The **JIRA-AI-Backend** is a Python-based backend system designed to enhance JIR
 - **Vector Database Support**:
   - Stores and retrieves queries using vector databases for efficient similarity searches.
 
-- **Leave and Workload Analysis**:
-  - Analyzes leave data and adjusts workload metrics based on sprint commitments.
 
 ---
 
@@ -45,6 +43,7 @@ The **JIRA-AI-Backend** is a Python-based backend system designed to enhance JIR
     │    ├── l2_board.csv # CSV file with board data 
     │    ├── new_custom.csv # Custom CSV file 
     │    ├── leave_calender.csv. #CSV file contaning leave data 
+    |    ├── membership.csv  # CSV file containing Registry data.
     |
     ├── generator_files/ # Folder for data generation scripts 
     │    ├── calender.py # Script for calendar-related data 
@@ -81,7 +80,7 @@ The **JIRA-AI-Backend** is a Python-based backend system designed to enhance JIR
    Create a .env file in the root directory.
    Add the required variables (e.g., API keys, database credentials).
 
-##Usage
+## Usage
 1. Generate Synthetic Data
     Use `data_gen.py`, `l2.py`, `calender.py` and `membership.py` to generate JIRA-like data:
    ```
